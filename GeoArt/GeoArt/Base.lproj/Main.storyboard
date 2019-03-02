@@ -24,18 +24,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="7NP-xk-g7S"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0P-qn-2ig">
-                                <rect key="frame" x="0.0" y="632" width="375" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z99-gv-syu">
+                                <rect key="frame" x="125" y="632" width="125" height="30"/>
+                                <state key="normal" title="Artify My Location"/>
+                                <connections>
+                                    <segue destination="CUX-06-BL2" kind="show" id="euE-6N-7mA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IuS-7X-Sya" secondAttribute="bottom" id="1uj-RU-m7c"/>
-                            <constraint firstItem="v0P-qn-2ig" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2cM-x7-uKZ"/>
-                            <constraint firstItem="v0P-qn-2ig" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-5" id="CXE-uP-QsT"/>
                             <constraint firstItem="IuS-7X-Sya" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DMR-hA-tX4"/>
+                            <constraint firstItem="z99-gv-syu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="JNc-fd-IQT"/>
                             <constraint firstItem="IuS-7X-Sya" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="XTw-oC-rim"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z99-gv-syu" secondAttribute="bottom" constant="5" id="tnV-Bh-Vxr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -46,6 +49,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+        <!--Art-->
+        <scene sceneID="Wai-CI-IKe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Art" id="CUX-06-BL2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30i-Ih-Cs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597" y="57"/>
         </scene>
     </scenes>
 </document>

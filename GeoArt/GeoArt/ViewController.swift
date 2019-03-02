@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     //IBOutlet to Mapview
 
     @IBOutlet weak var mapView: MKMapView!
-    
+    @IBOutlet weak var button: UIButton!
+   
     //didLoad function - runs when view loads
     override func viewDidLoad() {
         super.viewDidLoad() //super

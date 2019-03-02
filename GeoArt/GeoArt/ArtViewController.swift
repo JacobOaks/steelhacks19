@@ -14,5 +14,6 @@ class ArtViewController: UIViewController {
     //didLoad function - runs when view loads
     override func viewDidLoad() {
         super.viewDidLoad() //super
+        self.view.backgroundColor = UIColor(red: 50/225, green: 50/225, blue: 40/225, alpha: 0.7)
     }
 }

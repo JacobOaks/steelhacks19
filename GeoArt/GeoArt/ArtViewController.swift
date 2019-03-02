@@ -24,9 +24,9 @@ class ArtViewController: UIViewController {
     
     //setup swipe recognition
     func setupSwipe() {
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
-        leftSwipe.direction = .left
-        view.addGestureRecognizer(leftSwipe)
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        downSwipe.direction = .down
+        view.addGestureRecognizer(downSwipe)
     }
     
     //setup the computational art
@@ -52,7 +52,7 @@ class ArtViewController: UIViewController {
     
     //called when a swipe occurs
     @objc func handleSwipe(_ sender:UISwipeGestureRecognizer) {
-        if (sender.direction == .left) {
+        if (sender.direction == .down) {
             self.dismiss(animated: true, completion: nil) //return to previous screen
         }
     }

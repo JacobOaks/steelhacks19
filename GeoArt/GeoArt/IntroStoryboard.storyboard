@@ -18,20 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="YBR-sl-KNq">
-                                <rect key="frame" x="16" y="92" width="343" height="328"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoWords" translatesAutoresizingMaskIntoConstraints="NO" id="YBR-sl-KNq">
+                                <rect key="frame" x="60" y="114" width="254" height="254"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe Up to Begin!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3t2-zi-84h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Swipe Up to Begin!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3t2-zi-84h">
                                 <rect key="frame" x="78" y="625" width="219" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.35064280033111572" green="0.76359754800796509" blue="0.59998315572738647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTc-Z0-TIm">
-                                <rect key="frame" x="58" y="428" width="258" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTc-Z0-TIm">
+                                <rect key="frame" x="58" y="489" width="258" height="112"/>
                                 <string key="text">Every location is unique. With GeoArt, you can create a work of art using the digits in the coordinates of your exact location. Compare the art of locations from around the country or just down the street.</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -39,6 +36,15 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YBR-sl-KNq" firstAttribute="centerY" secondItem="FoA-Lf-Tca" secondAttribute="centerY" multiplier="3:4" id="3tk-8a-nK0"/>
+                            <constraint firstItem="HTc-Z0-TIm" firstAttribute="width" secondItem="Yvf-d5-uQC" secondAttribute="width" multiplier="4:5" id="BeM-qR-77g"/>
+                            <constraint firstItem="FoA-Lf-Tca" firstAttribute="bottom" secondItem="3t2-zi-84h" secondAttribute="bottom" constant="10" id="D8r-zw-l3g"/>
+                            <constraint firstItem="YBR-sl-KNq" firstAttribute="centerX" secondItem="FoA-Lf-Tca" secondAttribute="centerX" id="Ov8-OK-bKG"/>
+                            <constraint firstItem="3t2-zi-84h" firstAttribute="centerX" secondItem="FoA-Lf-Tca" secondAttribute="centerX" id="Pg5-QW-NFx"/>
+                            <constraint firstItem="3t2-zi-84h" firstAttribute="top" secondItem="HTc-Z0-TIm" secondAttribute="bottom" constant="40" id="SSy-iB-ind"/>
+                            <constraint firstItem="HTc-Z0-TIm" firstAttribute="centerX" secondItem="FoA-Lf-Tca" secondAttribute="centerX" id="W4i-3e-y9U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FoA-Lf-Tca"/>
                     </view>
                     <connections>
@@ -59,6 +65,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image-1" width="375" height="375"/>
+        <image name="LogoWords" width="375" height="375"/>
     </resources>
 </document>

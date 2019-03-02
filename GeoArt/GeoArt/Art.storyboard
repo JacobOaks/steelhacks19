@@ -22,6 +22,11 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLo-ek-uMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="gTD-Z8-0Tn">
+                    <connections>
+                        <action selector="onSwipe:" destination="TAG-Qh-4fP" id="2eh-na-sKr"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="503" y="-395"/>
         </scene>

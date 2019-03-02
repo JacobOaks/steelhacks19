@@ -18,32 +18,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IuS-7X-Sya">
-                                <rect key="frame" x="81" y="20" width="213" height="647"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IuS-7X-Sya">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="7NP-xk-g7S"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z99-gv-syu">
-                                <rect key="frame" x="125" y="632" width="125" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z99-gv-syu">
+                                <rect key="frame" x="0.0" y="632" width="375" height="30"/>
                                 <state key="normal" title="Artify My Location"/>
                                 <connections>
-                                    <segue destination="CUX-06-BL2" kind="show" id="euE-6N-7mA"/>
+                                    <action selector="onPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WWl-Ia-3NV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IuS-7X-Sya" secondAttribute="bottom" id="1uj-RU-m7c"/>
+                            <constraint firstItem="z99-gv-syu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CQi-cx-sf9"/>
                             <constraint firstItem="IuS-7X-Sya" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DMR-hA-tX4"/>
                             <constraint firstItem="z99-gv-syu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="JNc-fd-IQT"/>
-                            <constraint firstItem="IuS-7X-Sya" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="XTw-oC-rim"/>
+                            <constraint firstItem="IuS-7X-Sya" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QIx-ps-Swx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IuS-7X-Sya" secondAttribute="trailing" id="TB8-UZ-lR0"/>
+                            <constraint firstItem="z99-gv-syu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ivx-T0-tuT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z99-gv-syu" secondAttribute="bottom" constant="5" id="tnV-Bh-Vxr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="IuS-7X-Sya" id="1Z8-G6-2Hg"/>
+                        <segue destination="IOq-we-Lxw" kind="presentation" identifier="artSegue" id="HCg-zh-Te1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -51,12 +55,12 @@
             <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
         <!--Art-->
-        <scene sceneID="Wai-CI-IKe">
+        <scene sceneID="GZO-LJ-Qc4">
             <objects>
-                <viewControllerPlaceholder storyboardName="Art" id="CUX-06-BL2" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="30i-Ih-Cs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="artStoryboard" storyboardName="Art" id="IOq-we-Lxw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Anc-zN-nQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="57"/>
+            <point key="canvasLocation" x="692" y="132"/>
         </scene>
     </scenes>
 </document>

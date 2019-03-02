@@ -13,12 +13,23 @@ class ViewController: UIViewController {
 
     //location manager
     var locationManager = CLLocationManager()
+    var currentLocation = CLLocationCoordinate2D()
     
-    //IBOutlet to Mapview
-
+    //IBOutlets
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var button: UIButton!
    
+    //react to button press
+    @IBAction func onPress(_ sender: Any) {
+        performSegue(withIdentifier: "artSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! ArtViewController;
+        vc.long = self.currentLocation.longitude
+        vc.lat = self.currentLocation.latitude
+    }
+    
     //didLoad function - runs when view loads
     override func viewDidLoad() {
         super.viewDidLoad() //super
@@ -70,19 +81,15 @@ class ViewController: UIViewController {
             mapView.setRegion(region, animated: true) //set the region to the new region
         }
     }
-    
-    func interpretLocation(at latitude: Float, at longitude: Float) {
-        
-    }
 }
 
 extension ViewController: CLLocationManagerDelegate {
     
     //when location changes
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations)
-        guard let location = locations.last else { return } //if locations.last is nill, return
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude) //actual point where user is
+        if (locations.last == nil) { return } //return if there is no last location
+        self.currentLocation = locations.last!.coordinate //set location
+        let center = CLLocationCoordinate2D(latitude: self.currentLocation.latitude, longitude: self.currentLocation.longitude) //actual point where user is
         let region = MKCoordinateRegion.init(center: center, latitudinalMeters: 10000, longitudinalMeters: 10000)
         mapView.setRegion(region, animated: true) //region for display
     }

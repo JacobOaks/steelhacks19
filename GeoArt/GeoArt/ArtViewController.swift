@@ -14,12 +14,14 @@ class ArtViewController: UIViewController {
     //longitude and latitude values
     var long: Double = 0
     var lat: Double = 0
+    @IBOutlet var drawArea: Drawing!
     
     //didLoad function - runs when view loads
     override func viewDidLoad() {
         super.viewDidLoad() //super
         self.setupSwipe() //setup swipe recognition
         self.setupArt() //setup computational art
+        self.drawArea.setPos(self.long, self.lat) //set position in Drawing
     }
     
     //setup swipe recognition
@@ -32,14 +34,16 @@ class ArtViewController: UIViewController {
     //setup the computational art
     func setupArt() {
         
-        //interpret values from long/lat
-        let a = 8 //any # from 0-9 for red
-        let b = 5 //any # from 0-9 for green
-        let c = 2 //any # from 0-9 for blue
+        //interpret a, b, c from longitude
+        long = abs(long)
+        print("long \(long)")
         
-        //print long/lat for debug purposes
-        print(self.long)
-        print(self.lat)
+        let cF = long / 100 //c float
+        let c = Int(cF) //c int
+        let bF = (cF * 10) - (10 * Double(c)) //b float
+        let b = Int(bF) //b int
+        let aF = (bF * 10) - (10 * Double(b)) //a float
+        let a = Int(aF) //a int
         
         //parse values
         let redBack:CGFloat = CGFloat((a / 9)*225) //convert from int to r

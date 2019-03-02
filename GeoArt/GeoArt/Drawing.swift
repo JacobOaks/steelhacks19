@@ -4,11 +4,12 @@ import UIKit
 
 class Drawing: UIView {
     
-    var path: UIBezierPath!
+    var path: UIBezierPath! //drawing path
+    var long: Double = 0 //longitude
+    var lat: Double = 0 //latitude
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.backgroundColor = UIColor.darkGray
     }
     
@@ -16,6 +17,12 @@ class Drawing: UIView {
         super.init(coder: aDecoder)
     }
 
+    ///set local position variables
+    func setPos(_ long: Double, _ lat: Double) {
+        self.long = long
+        self.lat = lat
+    }
+    
     override func draw(_ rect: CGRect) {
         //let context = UIGraphicsGetCurrentContext()
 //        context!.setLineWidth(3.0)

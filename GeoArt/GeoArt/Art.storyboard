@@ -20,6 +20,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qpO-lc-3WV"/>
                     </view>
+                    <connections>
+                        <outlet property="drawArea" destination="iGZ-XD-Z6d" id="Hud-G1-vci"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLo-ek-uMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="gTD-Z8-0Tn">

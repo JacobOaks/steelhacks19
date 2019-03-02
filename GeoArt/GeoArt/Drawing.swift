@@ -7,6 +7,7 @@ class Drawing: UIView {
    
     override func draw(_ rect: CGRect) {
     let context = UIGraphicsGetCurrentContext()
+    view.backgroundColor = UIColor.redColor()
     context!.setLineWidth(3.0)
         context!.setStrokeColor(UIColor.purple.cgColor)
         context!.move(to: CGPoint(x:50, y:60))

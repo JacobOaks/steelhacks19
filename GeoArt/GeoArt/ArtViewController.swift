@@ -23,7 +23,7 @@
             super.viewDidLoad() //super
             self.setupSwipe() //setup swipe recognition
             self.setupArrays() //convert long and lat to arrays
-            self.drawArea.setPos(self.long, self.lat) //set position in Drawing
+            self.drawArea.setPos(self.longA!, self.latA!) //set position in Drawing
             self.setupArt() //setup computational art
         }
         
@@ -36,15 +36,42 @@
         
         //convert long and lat to array
         func setupArrays() {
+            
+            //set long and lat to arrays of 0 by default
+            self.longA = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] //0s by default
+            self.latA = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] //0s by default
+            
+            var extraLatZeros = 0
+            if (self.lat < 10) { extraLatZeros = extraLatZeros + 1 }
+            if (self.lat < 100) { extraLatZeros = extraLatZeros + 1 }
+            
+            var extraLongZeros = 0
+            if (self.long < 10) { extraLongZeros = extraLongZeros + 1 }
+            if (self.long < 100) { extraLongZeros = extraLongZeros + 1 }
+            
+            //create long array
             long = abs(long)
             let longCom = long * 100000000 //remove decimal place
-            self.longA = Int(longCom).array
+            let longArr = Int(longCom).array
+            
+            //fill in long
+            var i = extraLongZeros
+            for digit in longArr {
+                self.longA?[i] = digit
+                i = i + 1
+            }
             
             //convert latitude toa rray
             lat = abs(lat)
             let latCom = lat * 100000000 //remove decimal place
-            self.latA = Int(latCom).array
-
+            let latArr = Int(latCom).array
+            
+            //fill in lat
+            i = extraLatZeros
+            for digit in latArr {
+                self.latA?[i] = digit
+                i = i + 1
+            }
         }
         
         //setup the computational art
@@ -52,11 +79,8 @@
             
             //parse values
             let redBack:CGFloat = CGFloat(((self.longA?[1] ?? 0) / 9)*225) //convert from int to r
-            print (redBack)
             let greenBack:CGFloat = CGFloat(((self.longA?[2] ?? 0) / 9)*225) //convert from int to g
-            print (greenBack)
             let blueBack:CGFloat = CGFloat(((self.longA?[3] ?? 0) / 9)*225) //convert from int to b
-            print (blueBack)
             
             //background color
             self.view.backgroundColor = UIColor(red: redBack, green: greenBack, blue: blueBack, alpha: 1)
@@ -72,6 +96,6 @@
 
     extension Int {
         var array: [Int] {
-            return String(self).flatMap{ Int(String($0)) }
+            return String(self).compactMap{ Int(String($0)) }
         }
     }

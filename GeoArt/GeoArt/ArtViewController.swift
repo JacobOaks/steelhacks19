@@ -44,6 +44,7 @@
             lat = abs(lat)
             let latCom = lat * 100000000 //remove decimal place
             self.latA = Int(latCom).array
+
         }
         
         //setup the computational art

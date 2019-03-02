@@ -65,6 +65,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoWords" width="375" height="375"/>
+        <image name="LogoWords" width="268.5" height="268.5"/>
     </resources>
 </document>

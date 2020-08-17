@@ -7,8 +7,8 @@ The nature of the algorithm ensures that each piece of art is unique to its long
 
 Here are some interesting examples of pieces of art created using this app:
 Japan: 
-![Japan](https://imgur.com/a/HtM80KI)
-![Brazil](https://imgur.com/a/rYRrdpd)
+![Japan](https://i.imgur.com/TFINM6J.png)
+![Brazil](https://i.imgur.com/bzttzeC.png)
 
 The takeaway from this project is more than aesthetic. 
 Sure, theoretically it would be very cool to have one's background set to the artwork corresponding to their current location. Their phone's background would change as the user went about their daily life, and it would be neat to begin to associate places with specific pieces of art.

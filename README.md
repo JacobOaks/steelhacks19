@@ -6,8 +6,9 @@ For example, one digit may represent one shape's size, while another may represe
 The nature of the algorithm ensures that each piece of art is unique to its longitude and latitude.
 
 Here are some interesting examples of pieces of art created using this app:
-Japan: https://imgur.com/a/HtM80KI
-Brazil: https://imgur.com/a/rYRrdpd
+Japan: 
+![Japan](https://imgur.com/a/HtM80KI)
+![Brazil](https://imgur.com/a/rYRrdpd)
 
 The takeaway from this project is more than aesthetic. 
 Sure, theoretically it would be very cool to have one's background set to the artwork corresponding to their current location. Their phone's background would change as the user went about their daily life, and it would be neat to begin to associate places with specific pieces of art.

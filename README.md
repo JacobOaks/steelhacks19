@@ -6,8 +6,13 @@ For example, one digit may represent one shape's size, while another may represe
 The nature of the algorithm ensures that each piece of art is unique to its longitude and latitude.
 
 Here are some interesting examples of pieces of art created using this app:
+
 Japan: 
+
 ![Japan](https://i.imgur.com/TFINM6J.png)
+
+Brazil:
+
 ![Brazil](https://i.imgur.com/bzttzeC.png)
 
 The takeaway from this project is more than aesthetic. 

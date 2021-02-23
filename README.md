@@ -1,7 +1,7 @@
 
 GeoArt is a conceptual iOS app made for Steelhacks 2019.
 
-The app uses the phone's location to create a unique piece of art. It does this by processing each digit of the phone's longitude and latitude as a different art parameters. 
+The app uses the devices's location to create a unique piece of art. It does this by processing each digit of the devices's longitude and latitude as different parameters. 
 For example, one digit may represent one shape's size, while another may represent the blue component of the piece's background. 
 The nature of the algorithm ensures that each piece of art is unique to its longitude and latitude.
 

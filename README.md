@@ -1,11 +1,14 @@
 
-GeoArt is a conceptual iOS app made for Steelhacks 2019.
+# GeoArt
 
-The app uses the devices's location to create a unique piece of art. It does this by processing each digit of the devices's longitude and latitude as different parameters. 
-For example, one digit may represent one shape's size, while another may represent the blue component of the piece's background. 
-The nature of the algorithm ensures that each piece of art is unique to its longitude and latitude.
+### Overview
 
-Here are some interesting examples of pieces of art created using this app:
+GeoArt is a iOS app that was made for Steelhacks 2019. The project won second place.
+
+The app uses a devices's location to create a unique piece of art. It does this by processing each digit of the devices's longitude and latitude as different parameters. 
+For example, one digit may represent one shape's size, while another may represent the blue component of the piece's background color. The nature of the algorithm ensures that each piece of art is unique to its longitude and latitude. Additionally, since locations that are close together share many of the greater digits of latitude and longitude, the generated pieces of are for locations that are nearby each other - while still unique - should share resemblance proportional to how nearby they are.
+
+Here are two examples of pieces of art from completely separate areas of the world:
 
 Japan: 
 
@@ -15,7 +18,10 @@ Brazil:
 
 ![Brazil](https://i.imgur.com/bzttzeC.png)
 
-The takeaway from this project is more than aesthetic. 
-Sure, theoretically it would be very cool to have one's background set to the artwork corresponding to their current location. Their phone's background would change as the user went about their daily life, and it would be neat to begin to associate places with specific pieces of art.
-However, some who have seen this project have also noted how it could be used for security purposes or proof of location purposes. 
-For example, having screenshotted a specific piece of art could prove to somebody that the user was in a certain location. 
+### Application
+
+There are a couple practical applications we had in mind for this app. 
+
+For one, it would be very cool to have one's background set to the artwork corresponding to their current location. Their phone's background would change as the user went about their daily life, and the user would begin to associate places with specific pieces of art. Seeing what piece of art awaits them could be added to list of excitements involved in a user's traveling to a new place.
+
+Some other folks who have seen this project have also noted how it could be used for security purposes or proof of location purposes. Having obtained and saved a specific piece of art could prove to somebody that the user was in a certain location that they were supposed to be in.

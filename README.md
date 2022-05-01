@@ -6,7 +6,7 @@
 GeoArt is a iOS app that was made for Steelhacks 2019. The project won second place.
 
 The app uses a devices's location to create a unique piece of art. It does this by processing each digit of the devices's longitude and latitude as different parameters. 
-For example, one digit may represent one shape's size, while another may represent the blue component of the piece's background color. The nature of the algorithm ensures that each piece of art is unique to its longitude and latitude. Additionally, since locations that are close together share many of the greater digits of latitude and longitude, the generated pieces of are for locations that are nearby each other - while still unique - should share resemblance proportional to how nearby they are.
+For example, one digit may represent one shape's size, while another may represent the blue component of the piece's background color. The nature of the algorithm ensures that each piece of art is unique to its longitude and latitude. Additionally, since locations that are close together share many of the greater digits of latitude and longitude, the generated pieces of art for locations that are nearby each other - while still unique - should share resemblance proportional to how nearby they are.
 
 Here are two examples of pieces of art from completely separate areas of the world:
 
@@ -17,6 +17,8 @@ Japan:
 Brazil:
 
 ![Brazil](https://i.imgur.com/bzttzeC.png)
+
+If this project were done over a timespan longer than a weekend, more time could have been spent on attemping other, more interesting components of an art piece to generate, rather than just simple polygons and colors.
 
 ### Application
 
